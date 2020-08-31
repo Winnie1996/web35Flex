@@ -107,5 +107,35 @@ contactInfo[0].textContent = siteContent["contact"]["address"];
 contactInfo[1].textContent = siteContent["contact"]["phone"];
 contactInfo[2].textContent = siteContent["contact"]["email"];
 
+//Add Footer
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+
+//Change Color Nav
+navLinks.forEach((element) => {
+  element.style.color = "green";
+  element.style.fontSize = "20px";
+});
+
+//Append and Prepend
+const nav = document.querySelector(".container nav");
+const newNav = document.createElement("a");
+newNav.textContent = "Append";
+newNav.href = "#";
+nav.style.fontSize = "20px";
+nav.appendChild(newNav);
+
+const newerNav = document.createElement("a");
+newerNav.textContent = "Prepend";
+newerNav.href = "#";
+newerNav.style.fontSize = "20px";
+nav.prepend(newerNav);
+
+rectangleImg.style.border = "10px solid yellow";
+
+topParagraph[0].style.color = "teal";
+topParagraph[1].style.color = "teal";
+
+bottomParagraph[0].style.color = "teal";
+bottomParagraph[1].style.color = "teal";
+bottomParagraph[2].style.color = "teal";
